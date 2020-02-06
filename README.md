@@ -7,9 +7,7 @@ Use a JavaScript MVC framework (such as React) so that when you click on a white
 Add a text field and play button below the log element. When a comma delimited string of letters is entered into the text field and the play button is clicked it should highlight the appropriate keys in order for one second at a time.			
 Code should be stored in online accessible version control (such as GitHub). Note that code quality is important: readability, consistent formatting etc.			
 
-On completion:
-						
-Email a link to the online version control project to omogbolahan.alli@andela.com. The code should work in the latest version of Chrome/Firefox/Safari.
+The code should work in the latest version of Chrome/Firefox/Safari.
 						
 Bonus points for:
 • Using CSS to add more complexity - the “design” above is just a wireframe
