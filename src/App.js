@@ -1,10 +1,12 @@
 import React from 'react';
+import PianoApp from './components/PianoApp'
+import Container from 'react-bootstrap/Container'
 
 const App = ()=>{
   return(
-    <div>
-      App
-    </div>
+    <Container>
+      <PianoApp/>
+    </Container>
   )
 }
 
