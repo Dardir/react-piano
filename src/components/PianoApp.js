@@ -4,10 +4,11 @@ import Piano from './Piano'
 import PianoLogger from './PianoLogger'
 import PianoFeeder from './PianoFeeder'
 import '../styles/PianoApp.css';
+import {PianoStoreProvider} from '../states/PianoStoreProvider'
 
 const PianoApp = () => {
     return (
-        <div>
+        <PianoStoreProvider>
             <Row className='roundedborder'>
                 <Piano />
             </Row>
@@ -17,7 +18,7 @@ const PianoApp = () => {
             <Row className='roundedborder'>
                 <PianoFeeder />
             </Row>
-        </div>
+        </PianoStoreProvider>
     )
 }
 
