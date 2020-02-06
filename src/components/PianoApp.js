@@ -9,7 +9,7 @@ import {PianoStoreProvider} from '../states/PianoStoreProvider'
 const PianoApp = () => {
     return (
         <PianoStoreProvider>
-            <Row className='roundedborder'>
+            <Row>
                 <Piano />
             </Row>
             <Row className='roundedborder'>
