@@ -9,7 +9,7 @@ const App = () => {
   const [pianos, setPianos] = useState([<PianoApp/>]);
   return (
     <Container>
-      <Button variant="outline-primary" type="submit" onClick={() => setPianos([...pianos, <PianoApp/>])}>
+      <Button variant="outline-danger" type="submit" onClick={() => setPianos([...pianos, <PianoApp/>])}>
         <FontAwesomeIcon icon={faPlus} size="lg" pull="left" /> Add Piano
       </Button>
 
