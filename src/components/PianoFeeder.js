@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { usePianoStore } from '../states/PianoStoreProvider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMusic, faPlay } from '@fortawesome/free-solid-svg-icons'
@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button'
 import useValidateMusic from '../hooks/useValidateMusic'
 import Alert from 'react-bootstrap/Alert'
 import '../styles/PianoFeeder.css'
+import allActions from '../actions'
 
 const PianoFeeder = () => {
     const { dispatch } = usePianoStore();
@@ -29,7 +30,11 @@ const PianoFeeder = () => {
         }
     }
 
-
+    const handleSubmit = e => {
+        e.preventDefault();
+        dispatch(allActions.PianoActions.play(musicArray));
+        setMusicStr("");
+    }
 
     return (
         <Media>
@@ -45,7 +50,7 @@ const PianoFeeder = () => {
                             Please enter music letters as shown on the piano and hit Play
                         </Form.Text>
                     </Form.Group>
-                    <Button variant="outline-danger" type="submit" disabled={!isEnabled}>
+                    <Button variant="outline-danger" type="submit" disabled={!isEnabled} onClick = {(e) => handleSubmit(e)}>
                         <FontAwesomeIcon icon={faPlay} size="lg" pull="left" /> Play
                     </Button>
 
