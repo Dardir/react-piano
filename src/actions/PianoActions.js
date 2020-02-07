@@ -25,4 +25,10 @@ const clearPlay = () =>{
     }
 }
 
-export default{pressKey,addLog,play,clearPlay}
+const clearLog = () =>{
+    return {
+        type: "CLEAR_LOG"
+    }
+}
+
+export default{pressKey,addLog,play,clearPlay,clearLog}

@@ -9,6 +9,8 @@ function pianoReducer(state = PianoState, action = {}) {
         return { ...state, pianoLogger:[...state.pianoLogger, action.payload],pianoFeeder:action.payload };
     case 'CLEAR_PLAY':
         return { ...state,pianoFeeder:[] };
+    case 'CLEAR_LOG':
+        return { ...state,pianoLogger:[] };
       default:
         return state;
     }
