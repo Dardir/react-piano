@@ -6,7 +6,6 @@ import allActions from '../actions'
 const Piano = () => {
     const { state, dispatch } = usePianoStore();
     function handleKeyPress(value){
-        console.log(`Key Pressed is ${value}`);
         dispatch(allActions.PianoActions.addLog(value));
 
     }
