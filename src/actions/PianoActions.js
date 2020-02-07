@@ -19,4 +19,10 @@ const play = (payload) =>{
     }
 }
 
-export default{pressKey,addLog,play}
+const clearPlay = () =>{
+    return {
+        type: "CLEAR_PLAY"
+    }
+}
+
+export default{pressKey,addLog,play,clearPlay}

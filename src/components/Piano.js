@@ -34,10 +34,11 @@ const Piano = () => {
                     refMap[state.pianoFeeder[i]].current.style.background = "white";
                 }
                 clearInterval(interval);
+                dispatch(allActions.PianoActions.clearPlay());
             }
           }
         
-      },[state.pianoFeeder,refMap]);
+      },[state.pianoFeeder,refMap,dispatch]);
 
     function handleKeyPress(value){
         dispatch(allActions.PianoActions.addLog(value));
